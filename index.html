@@ -8,15 +8,15 @@
   <pre style="white-space: pre-wrap;">
 <u>do a thing</u>
 <noscript><b>Javascript is required for this to work.</b></noscript><script>
-  (function() {
-    var vars = getQueryVars()
-    console.log(vars.ip)
-  })()
+  function sendMessage () {
+    var ip = document.getElementById("ip").text
+    console.log(ip)
+  }
 </script></pre>
-<form method="get">
-  <input name="ip">
-  <input name="message">
-  <input type="submit" value="go">
-</form>
+  <label for="ip">IP address:</label>
+  <input type="text" id="ip" name="ip">
+  <label for="message">Message:</label>
+  <input type="text" id="message" name="message">
+  <button onclick="sendMessage()">Go</button>
 </body>
 </html>
