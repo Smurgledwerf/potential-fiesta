@@ -11,8 +11,29 @@
   function sendMessage () {
     var ip = document.getElementById("ip").value
     var message = document.getElementById("message").value
-    console.log(ip)
-    console.log(message)
+    //console.log(ip)
+    //console.log(message)
+    
+    var url = `http://${ip}:5005/reply`
+    console.log(url)
+    var body = {
+      silly: true,
+      message
+    }
+    console.log(body)
+    var headers = {
+      'Content-Type': 'application/json'
+    }
+    console.log(headers)
+    
+//     fetch(url, {
+//       method: "POST",
+//       mode: 'no-cors',
+//       headers,
+//       body
+//     }).then(res => {
+//       console.log("request complete! response:", res)
+//     })
   }
 </script></pre>
   <label for="ip">IP address:</label>
