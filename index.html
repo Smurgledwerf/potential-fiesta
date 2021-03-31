@@ -14,7 +14,7 @@
     //console.log(ip)
     //console.log(message)
     
-    var url = `http://${ip}:5005/reply`
+    var url = `http://${ip}:5001/reply`
     console.log(url)
     var body = {
       silly: true,
@@ -26,14 +26,14 @@
     }
     console.log(headers)
     
-//     fetch(url, {
-//       method: "POST",
-//       mode: 'no-cors',
-//       headers,
-//       body
-//     }).then(res => {
-//       console.log("request complete! response:", res)
-//     })
+    fetch(url, {
+      method: "POST",
+      mode: 'no-cors',
+      headers,
+      body
+    }).then(res => {
+      console.log("request complete! response:", res)
+    })
   }
 </script></pre>
   <label for="ip">IP address:</label>
