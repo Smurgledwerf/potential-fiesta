@@ -9,8 +9,10 @@
 <u>do a thing</u>
 <noscript><b>Javascript is required for this to work.</b></noscript><script>
   function sendMessage () {
-    var ip = document.getElementById("ip").text
+    var ip = document.getElementById("ip").value
+    var message = document.getElementById("message").value
     console.log(ip)
+    console.log(message)
   }
 </script></pre>
   <label for="ip">IP address:</label>
